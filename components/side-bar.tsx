@@ -104,7 +104,7 @@ return (
                       "text-md font-medium text-text-light"
                     )}
                   >
-                    {menu.label}
+                  {menu.label}
                   </span>
                 )}
                 </div>
