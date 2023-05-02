@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { SideBar,NavigationBar } from ".";
-export default ()=> {
+
+
+const Layout = ()=> {
   const [sideOn, setSideOn] = useState(false);
 return (
     <div className=" h-screen flex flex-row justify-start">
@@ -32,3 +34,5 @@ There are many variations of passages of Lorem Ipsum available, but the majority
       </div>
     </div>
 )};
+
+export default Layout;

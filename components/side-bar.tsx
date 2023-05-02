@@ -12,7 +12,7 @@ const menuItems = [
   { id: 4, label: "Manage Tutorials", icon: VideosIcon, link: "/tutorials" },
 ];
 
-export default ()=> {
+const SideBar = ()=> {
   const [toggleOn, setToggleOn] = useState(false);
   const [isCollapsible, setIsCollapsible] = useState(false);
 
@@ -127,3 +127,6 @@ return (
   </div>
 </div>
 )};
+
+export default SideBar;
+
