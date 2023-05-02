@@ -1,6 +1,17 @@
 import * as React from "react";
 
-function CollapsIcon({ toggleOn = false, fill = toggleOn ? 'black' : "#6C7281", ...rest }) {
+
+interface Props extends React.SVGProps<SVGSVGElement> {
+  toggleOn?: boolean;
+  fill?: string;
+}
+
+
+const CollapsIcon: React.FC<Props> = ({
+  toggleOn = false,
+  fill = toggleOn ? 'black' : '#6C7281',
+  ...rest
+}) => {
   return (
     <svg
       width={16}

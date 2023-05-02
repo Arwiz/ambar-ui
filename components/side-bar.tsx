@@ -89,10 +89,10 @@ return (
     </div>
 
     <div className="flex flex-col items-start mt-24">
-      {menuItems.map(({ icon: Icon, ...menu}) => {
+      {menuItems.map(({ icon: Icon, id, ...menu}) => {
         const classes = getNavItemClasses(menu);
         return (
-          <div className={classes}>
+          <div key={id} className={classes}>
             <Link href={menu.link}>
               <div className=" flex flex-row">
                 <div style={{ width: "2.5rem" }}>

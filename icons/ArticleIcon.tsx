@@ -1,6 +1,16 @@
 import * as React from "react";
 
-function ArticleIcon({ toggleOn = false, fill = toggleOn ? 'black' : "#6C7281", ...rest }) {
+interface Props extends React.SVGProps<SVGSVGElement> {
+  toggleOn?: boolean;
+  fill?: string;
+}
+
+
+const ArticleIcon: React.FC<Props> = ({
+  toggleOn = false,
+  fill = toggleOn ? 'black' : '#6C7281',
+  ...rest
+}) => {
   return (
     <svg
       width={24}
@@ -17,6 +27,5 @@ function ArticleIcon({ toggleOn = false, fill = toggleOn ? 'black' : "#6C7281", 
       <path d="M14 17H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill={fill} />
     </svg>
   );
-}
-
+};
 export default ArticleIcon;
