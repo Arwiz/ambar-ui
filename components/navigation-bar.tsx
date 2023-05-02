@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
-const NavigationBar = ()=> {
+function NavigationBar() {
   const [darkMode, setDarkMode] = useState(false);
 return (
     <nav className="py-10 mb-12 flex justify-between dark:text-white">

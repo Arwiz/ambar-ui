@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SideBar,NavigationBar } from ".";
 
 
-const Layout = ()=> {
+function Layout(){
   const [sideOn, setSideOn] = useState(false);
 return (
     <div className=" h-screen flex flex-row justify-start">

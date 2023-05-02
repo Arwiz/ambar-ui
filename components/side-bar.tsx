@@ -12,7 +12,7 @@ const menuItems = [
   { id: 4, label: "Manage Tutorials", icon: VideosIcon, link: "/tutorials" },
 ];
 
-const SideBar = ()=> {
+function SideBar() {
   const [toggleOn, setToggleOn] = useState(false);
   const [isCollapsible, setIsCollapsible] = useState(false);
 
