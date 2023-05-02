@@ -17,9 +17,9 @@ function SideBar() {
   const [isCollapsible, setIsCollapsible] = useState(false);
 
 
-  const wrapperClasses = classNames(' h-screen px-4 pt-8 pb-4 flex justify-between flex-col borde border-dashed  bg-slate-400', {
-    ['w-80']: !toggleOn,
-    ['w-20']: toggleOn
+  const wrapperClasses = classNames(" h-screen px-4 pt-8 pb-4 flex justify-between flex-col borde border-dashed  bg-slate-400", {
+    ["w-80"]: !toggleOn,
+    ["w-20"]: toggleOn
   });
 
   const collapseIconClasses = classNames(
