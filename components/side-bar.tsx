@@ -10,6 +10,8 @@ const menuItems = [
   { id: 2, label: "Manage Posts", icon: ArticleIcon, link: "/posts" },
   { id: 3, label: "Manage Users", icon: UsersIcon, link: "/users" },
   { id: 4, label: "Manage Tutorials", icon: VideosIcon, link: "/tutorials" },
+  { id: 5, label: "Manage Movies", icon: VideosIcon, link: "/tutorials" },
+   { id: 5, label: "Manage Movies2", icon: VideosIcon, link: "/tutorials" },
 ];
 
 function SideBar() {
@@ -17,7 +19,7 @@ function SideBar() {
   const [isCollapsible, setIsCollapsible] = useState(false);
 
 
-  const wrapperClasses = classNames(" h-screen px-4 pt-8 pb-4 flex justify-between flex-col borde border-dashed  bg-slate-400", {
+  const wrapperClasses = classNames("h-full overflow-auto bg-cyan-300 px-4 pt-8 pb-4 flex justify-between flex-col borde border-dashed  bg-slate-400", {
     ["w-80"]: !toggleOn,
     ["w-20"]: toggleOn
   });
