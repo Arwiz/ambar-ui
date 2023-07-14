@@ -62,5 +62,4 @@ const SortBucketComponent: ForwardRefRenderFunction<HTMLDivElement, SortBucketPr
     )
 }
 
-// export const SortBucket =  forwardRef<HTMLDivElement, SortBucketProps>(memo(SortBucketComponent));
-export const SortBucket =  memo(SortBucketComponent);
+export const SortBucket =  forwardRef<HTMLDivElement, SortBucketProps>(SortBucketComponent);
