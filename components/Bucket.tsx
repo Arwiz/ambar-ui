@@ -47,7 +47,9 @@ export const Bucket: React.FC<BucketProps> = ({ children, iamDroped }: BucketPro
 
 	return (
 		<div ref={drop} style={{ ...style, backgroundColor }} data-testid="dustbin">
-            {isActive ? 'Release to drop' : 'Drag a box here'}
+			<div className='p-5'>
+				{isActive ? 'Release to drop' : 'Drag a box here'}
+			</div>
             {children}
 		</div>
 	)

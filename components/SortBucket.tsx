@@ -1,6 +1,6 @@
 import update from 'immutability-helper'
 import type { FC } from 'react'
-import { forwardRef, useCallback, useState ,  Ref, ForwardRefRenderFunction, useEffect } from 'react'
+import { forwardRef, useCallback, useState ,  Ref, ForwardRefRenderFunction, useEffect, memo } from 'react'
 
 import { SortCard } from './SortCard'
 import { Question } from '@/interface'
@@ -17,14 +17,13 @@ export interface SortBucketProps {
 }
 
 
-
 const SortBucketComponent: ForwardRefRenderFunction<HTMLDivElement, SortBucketProps> = (props: SortBucketProps, ref) => {
-    const { cards, removeCard } = props;
+    const {  cards, removeCard } = props;
 
-    const [questions , setQuestions] = useState(cards)
+    const [questions , setQuestions] = useState<Question[]>([])
 
    useEffect(() => {
-       setQuestions(cards);
+       setQuestions(()=> cards);
    }, [cards])
     
 
@@ -41,6 +40,7 @@ const SortBucketComponent: ForwardRefRenderFunction<HTMLDivElement, SortBucketPr
 
     const renderCard = useCallback(
         (card: Question, index: number) => {
+
             return (
                 <SortCard
                     key={card._id}
@@ -57,9 +57,10 @@ const SortBucketComponent: ForwardRefRenderFunction<HTMLDivElement, SortBucketPr
 
     return (
         <>
-            <div style={style}>{cards.map((card, i) => renderCard(card, i))}</div>
+            <div style={style}>{questions.map((card, i) => renderCard(card, i))}</div>
         </>
     )
 }
 
-export const SortBucket = forwardRef<HTMLDivElement, SortBucketProps>(SortBucketComponent);
+// export const SortBucket =  forwardRef<HTMLDivElement, SortBucketProps>(memo(SortBucketComponent));
+export const SortBucket =  memo(SortBucketComponent);

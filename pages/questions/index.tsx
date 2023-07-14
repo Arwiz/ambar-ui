@@ -39,7 +39,9 @@ const QuestionListComponent = (props: any) => {
     }, []);
   
    
-    const navigateToCreateBlog = () => {
+  const navigateToCreateBlog = () => {
+    console.log('CArds', selectedQuestions);  
+
     };
     
       
@@ -85,8 +87,8 @@ const QuestionListComponent = (props: any) => {
                 </Bucket> 
               </div> */}
         </div>
-            </div>
-            </DndProvider>
+      </div>
+      </DndProvider>
     </QuestionContextProvider> 
   )
 };
